@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <?php include 'home.php';?> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Cifrador/Descifrador</h1>
+        <form id="form">
+
+            <!-- Mensaje -->
+            <div class="row">
+                <div class="col-20">
+                    <label for="email">Mensaje</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="mensaje" id="mensaje" autofocus="true">
+                </div>
+            </div>
+            <!-- Clave -->
+            <div class="row">
+                <div class="col-20">
+                    <label for="name">Clave</label>
+                </div>
+                <div class="col-75">
+                    <input type="number" name="clave" id="clave" min="0">
+                </div>
+            </div>
+            <!-- Resultado -->
+            <div class="row">
+                <div class="col-20">
+                    <label for="resultado">Resultado</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="resultado" id="resultado" disabled>
+                </div>
+            </div>
+            <!-- Codificacion -->
+            <div class="row">
+                <div class="col-20">
+                    <label for="codificacion">Codificación</label>
+                </div>
+                <div class="col-25">
+                    <input type="radio" name="codificacion" value="Caesar" checked="true">Caesar<br>
+                </div>
+                <div class="col-25">
+                    <input  type="radio" name="codificacion" value="Vigenere">Vigenere<br>
+                </div>
+            </div>
+            <!-- Cifrar-Descifrar -->
+            <div class="row">
+                <input type="submit" value="Cifrar">
+                <input type="button" value="Descifrar" onclick="descifrar()">
+                <input type="button" value="Limpiar" onclick="limpiar()">
+                <input type="button" value="Fuerza Bruta" onclick="descifrarFuerzaBruta()" id="fb" >
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
